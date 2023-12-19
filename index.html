@@ -35,53 +35,17 @@
     </style>
     <title>Library Cabins Availability</title>
     <script>
-        // Function to update cabin status and color
         function updateCabinStatus(cabinId, newStatus) {
             // Update the status in the HTML
-            const statusElement = document.getElementById(`status${cabinId}`);
-            statusElement.textContent = newStatus;
+            document.getElementById(`status${cabinId}`).textContent = newStatus;
 
             // Update the color based on the status
             const cabinElement = document.getElementById(`cabin${cabinId}`);
             cabinElement.style.backgroundColor = newStatus === 'Available' ? '#ccffcc' : '#ffcccc';
         }
 
-        // Loop to set initial status for all cabins
-        for (let i = 1; i <= 5; i++) { // For simplicity, let's create 5 cabins
-            // Create a new section element
-            const newSection = document.createElement('section');
-            newSection.className = 'cabin';
-            newSection.id = cabin${i};
-
-            // Create HTML content for the section
-            newSection.innerHTML = `
-                <h2>Cabin ${i}</h2>
-                <p>Status: <span id='status${i}'>Available</span></p>
-            `;
-
-            // Append the new section to the body
-            document.body.appendChild(newSection);
-            
-            // Set initial status for each cabin (you can change 'Unavailable' to 'Available' to see the color change)
-            updateCabinStatus(i, 'Unavailable');
-        }
-
-        // Example: Modify Cabin 3 to 'Available'
-        function makeCabinAvailable() {
-            updateCabinStatus(3, 'Available');
-        }
-
-        // Example: Modify Cabin 2 to 'Unavailable'
-        function makeCabinUnavailable() {
-            updateCabinStatus(2, 'Unavailable');
-        }
-
-        // Example: Reset all cabins to 'Available'
-        function resetAllCabins() {
-            for (let i = 1; i <= 5; i++) {
-                updateCabinStatus(i, 'Available');
-            }
-        }
+        // Example: Set Cabin 1 to Unavailable
+        updateCabinStatus(1, 'Unavailable');
     </script>
 </head>
 <body>
@@ -90,12 +54,303 @@
         <h1>Library Cabins Availability</h1>
     </header>
 
-    <button onclick="makeCabinAvailable()">Make Cabin 3 Available</button>
-    <button onclick="makeCabinUnavailable()">Make Cabin 2 Unavailable</button>
-    <button onclick="resetAllCabins()">Reset All Cabins to Available</button>
+    <section class="cabin" id="cabin1">
+        <h2>Cabin 1</h2>
+        <p>Status: <span id="status1">Available</span></p>
+    </section>
+
+    <section class="cabin" id="cabin2">
+        <h2>Cabin 2</h2>
+        <p>Status: <span id="status2">Available</span></p>
+    </section>
+    <section class="cabin" id="cabin3">
+        <h2>Cabin 3</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin4">
+        <h2>Cabin 4</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin5">
+        <h2>Cabin 5</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin6">
+        <h2>Cabin 6</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin7">
+        <h2>Cabin 7</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin8">
+        <h2>Cabin 8</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin9">
+        <h2>Cabin 9</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin10">
+        <h2>Cabin 10</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin11">
+        <h2>Cabin 11</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin12">
+        <h2>Cabin 12</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin13">
+        <h2>Cabin 13</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin14">
+        <h2>Cabin 14</h2>
+        <p>Status: Available</p>
+</section>
+    <section class="cabin" id="cabin15">
+        <h2>Cabin 15</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin16">
+        <h2>Cabin 16</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin17">
+        <h2>Cabin 17</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin18">
+        <h2>Cabin 18</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin19">
+        <h2>Cabin 19</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin20">
+        <h2>Cabin 20</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin21">
+        <h2>Cabin 21</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin22">
+        <h2>Cabin 22</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin23">
+        <h2>Cabin 23</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin24">
+        <h2>Cabin 24</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin25">
+        <h2>Cabin 25</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin26">
+        <h2>Cabin 26</h2>
+        <p>Status: Available</p>
+</section>
+    <section class="cabin" id="cabin27">
+        <h2>Cabin 27</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin28">
+        <h2>Cabin 28</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin29">
+        <h2>Cabin 29</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin30">
+        <h2>Cabin 30</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin31">
+        <h2>Cabin 31</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin32">
+        <h2>Cabin 32</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin33">
+        <h2>Cabin 33</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin34">
+        <h2>Cabin 34</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin35">
+        <h2>Cabin 35</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin36">
+        <h2>Cabin 36</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin37">
+        <h2>Cabin 37</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin38">
+        <h2>Cabin 38</h2>
+        <p>Status: Available</p>
+</section>
+    <section class="cabin" id="cabin39">
+        <h2>Cabin 39</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin40">
+        <h2>Cabin 40</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin41">
+        <h2>Cabin 41</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin42">
+        <h2>Cabin 42</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin43">
+        <h2>Cabin 43</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin44">
+        <h2>Cabin 44</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin45">
+        <h2>Cabin 45</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin46">
+        <h2>Cabin 46</h2>
+        <p>Status: Available</p>
+</section>
+<section class="cabin" id="cabin47">
+        <h2>Cabin 47</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin48">
+        <h2>Cabin 48</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin49">
+        <h2>Cabin 49</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin50">
+        <h2>Cabin 50</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin51">
+        <h2>Cabin 51</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin52">
+        <h2>Cabin 52</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin53">
+        <h2>Cabin 53</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin54">
+        <h2>Cabin 54</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin55">
+        <h2>Cabin 55</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin56">
+        <h2>Cabin 56</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin57">
+        <h2>Cabin 57</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin58">
+        <h2>Cabin 58</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin59">
+        <h2>Cabin 59</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin60">
+        <h2>Cabin 60</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin61">
+        <h2>Cabin 61</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin62">
+        <h2>Cabin 62</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin63">
+        <h2>Cabin 63</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin64">
+        <h2>Cabin 64</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin65">
+        <h2>Cabin 65</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin66">
+        <h2>Cabin 66</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin67">
+        <h2>Cabin 67</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin68">
+        <h2>Cabin 68</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin69">
+        <h2>Cabin 69</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin70">
+        <h2>Cabin 70</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin71">
+        <h2>Cabin 71</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="cabin72">
+        <h2>Cabin 72</h2>
+        <p>Status: Available</p>
+    </section>
+<section class="cabin" id="END">
+        <h2>END</h2>
+        <p>Status: Uavailable</p>
+</section>
+    <!-- Add more sections for each cabin -->
 
     <footer>
-        <p>&copy; 2023 Your Library</p>
+        <p>&copy; SRI SARASWATI STUDYHALLS</p>
     </footer>
 
 </body>
