@@ -33,19 +33,55 @@
             width: 100%;
         }
     </style>
-    <title>Studyhall Cabins Availability</title>
+    <title>Library Cabins Availability</title>
     <script>
+        // Function to update cabin status and color
         function updateCabinStatus(cabinId, newStatus) {
             // Update the status in the HTML
-            document.getElementById(`status${cabinId}`).textContent = newStatus;
+            const statusElement = document.getElementById(`status${cabinId}`);
+            statusElement.textContent = newStatus;
 
             // Update the color based on the status
             const cabinElement = document.getElementById(`cabin${cabinId}`);
             cabinElement.style.backgroundColor = newStatus === 'Available' ? '#ccffcc' : '#ffcccc';
         }
 
-        // Example: Set Cabin 1 to Unavailable
-        updateCabinStatus(1, 'Unavailable');
+        // Loop to set initial status for all cabins
+        for (let i = 1; i <= 5; i++) { // For simplicity, let's create 5 cabins
+            // Create a new section element
+            const newSection = document.createElement('section');
+            newSection.className = 'cabin';
+            newSection.id = cabin${i};
+
+            // Create HTML content for the section
+            newSection.innerHTML = `
+                <h2>Cabin ${i}</h2>
+                <p>Status: <span id='status${i}'>Available</span></p>
+            `;
+
+            // Append the new section to the body
+            document.body.appendChild(newSection);
+            
+            // Set initial status for each cabin (you can change 'Unavailable' to 'Available' to see the color change)
+            updateCabinStatus(i, 'Unavailable');
+        }
+
+        // Example: Modify Cabin 3 to 'Available'
+        function makeCabinAvailable() {
+            updateCabinStatus(3, 'Available');
+        }
+
+        // Example: Modify Cabin 2 to 'Unavailable'
+        function makeCabinUnavailable() {
+            updateCabinStatus(2, 'Unavailable');
+        }
+
+        // Example: Reset all cabins to 'Available'
+        function resetAllCabins() {
+            for (let i = 1; i <= 5; i++) {
+                updateCabinStatus(i, 'Available');
+            }
+        }
     </script>
 </head>
 <body>
@@ -54,65 +90,9 @@
         <h1>Library Cabins Availability</h1>
     </header>
 
-    <section class="cabin" id="cabin1">
-        <h2>Cabin 1</h2>
-        <p>Status: <span id="status1">Available</span></p>
-    </section>
-
-    <section class="cabin" id="cabin2">
-        <h2>Cabin 2</h2>
-        <p>Status: <span id="status2">Available</span></p>
-    </section>
-    <section class="cabin" id="cabin3">
-        <h2>Cabin 3</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin4">
-        <h2>Cabin 4</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin5">
-        <h2>Cabin 5</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin6">
-        <h2>Cabin 6</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin7">
-        <h2>Cabin 7</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin8">
-        <h2>Cabin 8</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin9">
-        <h2>Cabin 9</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin10">
-        <h2>Cabin 10</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin11">
-        <h2>Cabin 11</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin12">
-        <h2>Cabin 12</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin13">
-        <h2>Cabin 13</h2>
-        <p>Status: Available</p>
-    </section>
-<section class="cabin" id="cabin14">
-        <h2>Cabin 14</h2>
-        <p>Status: Available</p>
-</section>
-
-    <!-- Add more sections for each cabin -->
+    <button onclick="makeCabinAvailable()">Make Cabin 3 Available</button>
+    <button onclick="makeCabinUnavailable()">Make Cabin 2 Unavailable</button>
+    <button onclick="resetAllCabins()">Reset All Cabins to Available</button>
 
     <footer>
         <p>&copy; 2023 Your Library</p>
